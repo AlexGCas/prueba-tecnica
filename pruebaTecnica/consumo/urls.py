@@ -1,0 +1,9 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index),
+    path('<endpointLocation>/<endpointResource>', views.endpoint),
+    path('<endpointLocation>/<endpointResource>/drop', views.drop),
+]
