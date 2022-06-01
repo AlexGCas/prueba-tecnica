@@ -44,6 +44,17 @@ def conexion(databaseName, collectionName):
 def visualizacion(data):
     os.system('clear')
     contador = 0
+    
+    for dato in data:
+        if contador > 10:
+            break
+        else:
+            if contador == 0:
+                keys = dato.keys()
+                print(keys)
+            else:
+                print(dato.values())
+        contador = contador + 1
     header = "<table><tr>"
     content  = ""
     for key in keys:

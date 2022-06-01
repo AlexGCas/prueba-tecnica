@@ -22,9 +22,7 @@ headers = {
 def index(request):
     endpoint = '/cryptocurrency/map'
     # tomar la informacion
-    data = getInfo(endpoint)
     os.system('clear')
-    print(data['name'])
     return HttpResponse("<h1>escribe una url para acceder a un endpoint </h1> <br/> <h2>ej:</h2> http://127.0.0.1:8000/consumo/cryptocurrency/map")
 # acceso a los endpoint
 def endpoint(request, endpointLocation, endpointResource):
